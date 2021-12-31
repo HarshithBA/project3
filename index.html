@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+    <script src="myscript.js"></script>
+    <style>
+      form {
+        width: 50%;
+      }
+
+      label,
+      input {
+        display: block;
+        width: 100%;
+        margin: 8px;
+        padding: 5px;
+        border-radius: 4px;
+      }
+      body {
+        margin-left: 50px;
+        margin-right: 50px;
+        background-color: cornsilk;
+      }
+      button {
+        margin: 8px;
+        border: none;
+        border-radius: 4px;
+        padding: 10px;
+        background-color: #4caf50;
+        cursor: pointer;
+        color: white;
+        display: block;
+      }
+      #errorContact,
+      #errorName {
+        color: red;
+        display: none;
+        margin: 8px;
+        padding: 5px;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CONTACT US</h1>
+    <h5>Enter your name and contact Number in the form below</h5>
+    <p>
+      <i
+        >Please do not leave the name field blank and enter a mobile number of
+        10 digits</i
+      >
+    </p>
+    <form>
+      <label>Name:</label>
+      <input type="text" id="userName" placeholder="Your name.." />
+      <span id="errorName">Name Cannot be left blank.</span>
+      <label>Contact Number:</label>
+      <input
+        type="text"
+        id="contactInput"
+        placeholder="Enter Mobile Number.."
+      />
+      <span id="errorContact">Please Enter a 10 Digit Mobile Number</span>
+      <button type="button" onclick="validate()">Submit</button>
+    </form>
+  </body>
+</html>
